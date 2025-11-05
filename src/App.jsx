@@ -45,13 +45,16 @@ function Header(){
       <Container>
         <div className="p-4 flex justify-center items-center relative">
           <NavLink to="/" className="font-extrabold text-2xl absolute left-0">CANINEO</NavLink>
-          <nav className="hidden md:flex gap-3 text-lg justify-center">
-            <NavLink to="/" end className={({isActive}) => `${base} ${isActive?active:''}`}>Accueil</NavLink>
-            <NavLink to="/apropos" className={({isActive}) => `${base} ${isActive?active:''}`}>À propos</NavLink>
-            <NavLink to="/services" className={({isActive}) => `${base} ${isActive?active:''}`}>Services</NavLink>
-            <NavLink to="/parcours" className={({isActive}) => `${base} ${isActive?active:''}`}>Parcours</NavLink>
-            <NavLink to="/contact" className={({isActive}) => `${base} ${isActive?active:''}`}>Contact</NavLink>
-          </nav>
+          <nav
+  className="text-lg main-nav"
+  style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}
+>
+  <NavLink to="/" end className="px-3 py-2 rounded hover:bg-green-100">Accueil</NavLink>
+  <NavLink to="/apropos" className="px-3 py-2 rounded hover:bg-green-100">À propos</NavLink>
+  <NavLink to="/services" className="px-3 py-2 rounded hover:bg-green-100">Services</NavLink>
+  <NavLink to="/parcours" className="px-3 py-2 rounded hover:bg-green-100">Parcours</NavLink>
+  <NavLink to="/contact" className="px-3 py-2 rounded hover:bg-green-100">Contact</NavLink>
+</nav>
         </div>
       </Container>
     </header>
