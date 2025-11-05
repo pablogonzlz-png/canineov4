@@ -43,9 +43,9 @@ function Header(){
   return (
     <header className="bg-white shadow sticky top-0 z-10">
       <Container>
-        <div className="p-4 flex justify-between items-center">
-          <NavLink to="/" className="font-extrabold text-2xl">CANINEO</NavLink>
-          <nav className="hidden md:flex gap-2 text-lg">
+        <div className="p-4 flex justify-center items-center relative">
+          <NavLink to="/" className="font-extrabold text-2xl absolute left-0">CANINEO</NavLink>
+          <nav className="hidden md:flex gap-3 text-lg justify-center">
             <NavLink to="/" end className={({isActive}) => `${base} ${isActive?active:''}`}>Accueil</NavLink>
             <NavLink to="/apropos" className={({isActive}) => `${base} ${isActive?active:''}`}>À propos</NavLink>
             <NavLink to="/services" className={({isActive}) => `${base} ${isActive?active:''}`}>Services</NavLink>
@@ -57,7 +57,6 @@ function Header(){
     </header>
   );
 }
-
 
 function Footer(){
   return (
@@ -92,7 +91,7 @@ function Accueil(){
               </div>
             </div>
             <div className="h-72 md:h-96 rounded-3xl grid place-items-center text-gray-600 w-full" style={{backgroundImage:"var(--hero)", backgroundSize:"cover", backgroundPosition:"center", backgroundColor:"#e5e7eb"}}>
-              {/* Photo héro — /public/assets/hero.jpg */}
+              {/* /public/assets/hero.jpg */}
             </div>
           </div>
         </Container>
@@ -312,7 +311,7 @@ function Contact(){
 export default function App(){
   return (
     <ErrorBoundary>
-      <Router initialEntries={["/"]}>
+      <Router>
         <ApplyTheme />
         <Header />
         <Routes>
