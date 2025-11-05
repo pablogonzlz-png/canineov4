@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { MemoryRouter as Router, Routes, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, NavLink } from "react-router-dom";
 
 const THEME = { brand: "#1f7a5b", brandDark: "#165c45", brandLight: "#e8f5ef", accent: "#f59e0b" };
 const ASSETS = { hero: "/assets/hero.jpg", constance: "/assets/constance.jpg", marc: "/assets/marc.jpg" };
@@ -41,18 +41,23 @@ function Header(){
   const base = "px-3 py-2 rounded hover:bg-green-100";
   const active = "text-green-700 font-semibold";
   return (
-    <header className="bg-white shadow p-4 flex justify-between items-center sticky top-0 z-10">
-      <NavLink to="/" className="font-extrabold text-2xl">CANINEO</NavLink>
-      <nav className="hidden md:flex gap-2 text-lg">
-        <NavLink to="/" end className={({isActive}) => `${base} ${isActive?active:''}`}>Accueil</NavLink>
-        <NavLink to="/apropos" className={({isActive}) => `${base} ${isActive?active:''}`}>À propos</NavLink>
-        <NavLink to="/services" className={({isActive}) => `${base} ${isActive?active:''}`}>Services</NavLink>
-        <NavLink to="/parcours" className={({isActive}) => `${base} ${isActive?active:''}`}>Parcours</NavLink>
-        <NavLink to="/contact" className={({isActive}) => `${base} ${isActive?active:''}`}>Contact</NavLink>
-      </nav>
+    <header className="bg-white shadow sticky top-0 z-10">
+      <Container>
+        <div className="p-4 flex justify-between items-center">
+          <NavLink to="/" className="font-extrabold text-2xl">CANINEO</NavLink>
+          <nav className="hidden md:flex gap-2 text-lg">
+            <NavLink to="/" end className={({isActive}) => `${base} ${isActive?active:''}`}>Accueil</NavLink>
+            <NavLink to="/apropos" className={({isActive}) => `${base} ${isActive?active:''}`}>À propos</NavLink>
+            <NavLink to="/services" className={({isActive}) => `${base} ${isActive?active:''}`}>Services</NavLink>
+            <NavLink to="/parcours" className={({isActive}) => `${base} ${isActive?active:''}`}>Parcours</NavLink>
+            <NavLink to="/contact" className={({isActive}) => `${base} ${isActive?active:''}`}>Contact</NavLink>
+          </nav>
+        </div>
+      </Container>
     </header>
   );
 }
+
 
 function Footer(){
   return (
