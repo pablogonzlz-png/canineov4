@@ -44,7 +44,12 @@ function Header(){
     <header className="bg-white shadow sticky top-0 z-10">
       <Container>
         <div className="p-4 flex justify-center items-center relative">
-          <NavLink to="/" className="font-extrabold text-2xl absolute left-0">CANINEO</NavLink>
+          <NavLink
+  to="/"
+  className="font-extrabold text-2xl absolute left-4 md:left-8"
+>
+  CANINEO
+</NavLink>
           <nav
   className="text-lg main-nav"
   style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}
