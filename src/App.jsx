@@ -51,8 +51,14 @@ function Header(){
   CANINEO
 </NavLink>
           <nav
-  className="text-lg main-nav"
-  style={{ display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}
+  className="text-lg"
+  style={{
+    display: "flex",
+    justifyContent: "center",
+    gap: "16px",
+    flexWrap: "wrap",
+    marginLeft: "140px" // espace pour le logo à gauche
+  }}
 >
   <NavLink to="/" end className="px-3 py-2 rounded hover:bg-green-100">Accueil</NavLink>
   <NavLink to="/apropos" className="px-3 py-2 rounded hover:bg-green-100">À propos</NavLink>
@@ -60,6 +66,7 @@ function Header(){
   <NavLink to="/parcours" className="px-3 py-2 rounded hover:bg-green-100">Parcours</NavLink>
   <NavLink to="/contact" className="px-3 py-2 rounded hover:bg-green-100">Contact</NavLink>
 </nav>
+
         </div>
       </Container>
     </header>
