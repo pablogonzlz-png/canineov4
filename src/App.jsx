@@ -157,7 +157,7 @@ function Accueil(){
           <img
             src={`/assets/icons/${src}`}
             alt={alt}
-            style={{height: "2rem", width: "2rem", objectFit: "contain"}}
+            style={{height: "6rem", width: "6rem", objectFit: "contain"}}
             onError={(e) => { e.currentTarget.style.display = "none"; e.currentTarget.parentElement.innerHTML = '<div style="height:2rem;width:2rem;background:#d1d5db;border-radius:.5rem"></div>'; }}
           />
         </div>
@@ -194,7 +194,7 @@ function Accueil(){
         <img
           src={`/assets/icons/${f.icon}`}          // ← adapte ce chemin si besoin
           alt={f.title}
-          style={{ height: "2rem", width: "2rem", objectFit: "contain" }}
+          style={{ height: "6rem", width: "6rem", objectFit: "contain" }}
           onError={(e) => {
             e.currentTarget.style.display = "none";
             e.currentTarget.parentElement.innerHTML =
