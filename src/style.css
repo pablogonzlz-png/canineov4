@@ -20,3 +20,9 @@ a{color:inherit;text-decoration:none}
 .px-6{padding-left:1.5rem;padding-right:1.5rem}
 @media(min-width:768px){.md\:px-12{padding-left:3rem;padding-right:3rem}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:1024px){.lg\:px-20{padding-left:5rem;padding-right:5rem}.lg\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:768px){
+  .md\:px-12{padding-left:3rem;padding-right:3rem}
+  .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  /* ➜ AJOUTE CETTE LIGNE : */
+  .md\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
