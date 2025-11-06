@@ -182,28 +182,32 @@ function Accueil(){
       <section className="py-14" style={{background:"var(--brand-light)"}}>
         <Container>
           <h2 className="text-2xl font-bold mb-6">Pourquoi choisir Canineo</h2>
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-white border rounded-2xl p-6">
-              <div className="h-12 w-12 bg-gray-300 rounded mb-3"/>
-              <h3 className="font-semibold mb-1">Approche scientifique</h3>
-              <p className="text-sm text-gray-600">Nos méthodes reposent sur la science du comportement animal et le renforcement positif.</p>
-            </div>
-            <div className="bg-white border rounded-2xl p-6">
-              <div className="h-12 w-12 bg-gray-300 rounded mb-3"/>
-              <h3 className="font-semibold mb-1">Suivi structuré</h3>
-              <p className="text-sm text-gray-600">Chaque client reçoit un plan d’entraînement clair, des exercices hebdomadaires et un suivi documenté.</p>
-            </div>
-            <div className="bg-white border rounded-2xl p-6">
-              <div className="h-12 w-12 bg-gray-300 rounded mb-3"/>
-              <h3 className="font-semibold mb-1">Objectifs clairs</h3>
-              <p className="text-sm text-gray-600">Nous établissons ensemble des objectifs mesurables et atteignables adaptés à chaque chien.</p>
-            </div>
-            <div className="bg-white border rounded-2xl p-6">
-              <div className="h-12 w-12 bg-gray-300 rounded mb-3"/>
-              <h3 className="font-semibold mb-1">Résultats durables</h3>
-              <p className="text-sm text-gray-600">L’apprentissage est ancré dans la cohérence familiale et des routines stables pour des résultats à long terme.</p>
-            </div>
-          </div>
+<div className="grid md:grid-cols-4 gap-6">
+  {[
+    { title: "Approche scientifique", icon: "icone-approche-scientifique.png", text: "Nos méthodes reposent sur la science du comportement animal et le renforcement positif." },
+    { title: "Suivi structuré", icon: "icone-suivi-structure.png", text: "Chaque client reçoit un plan d’entraînement clair, des exercices hebdomadaires et un suivi documenté." },
+    { title: "Objectifs clairs", icon: "icone-objectifs-clairs.png", text: "Nous établissons ensemble des objectifs mesurables et atteignables adaptés à chaque chien." },
+    { title: "Résultats durables", icon: "icone-resultats-durables.png", text: "L’apprentissage est ancré dans la cohérence familiale et des routines stables pour des résultats à long terme." },
+  ].map((f, i) => (
+    <div key={i} className="bg-white border rounded-2xl p-6">
+      <div className="h-12 w-12 rounded mb-3 grid place-items-center" style={{background:"var(--brand-light)"}}>
+        <img
+          src={`/assets/icons/${f.icon}`}          // ← adapte ce chemin si besoin
+          alt={f.title}
+          style={{ height: "2rem", width: "2rem", objectFit: "contain" }}
+          onError={(e) => {
+            e.currentTarget.style.display = "none";
+            e.currentTarget.parentElement.innerHTML =
+              '<div style="height:2rem;width:2rem;background:#d1d5db;border-radius:.5rem"></div>';
+          }}
+        />
+      </div>
+      <h3 className="font-semibold mb-1">{f.title}</h3>
+      <p className="text-sm text-gray-600">{f.text}</p>
+    </div>
+  ))}
+</div>
+
         </Container>
       </section>
 
