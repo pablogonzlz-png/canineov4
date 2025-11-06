@@ -135,26 +135,49 @@ function Accueil(){
         </Container>
       </section>
 
-      <section className="py-14 bg-white">
-        <Container>
-          <div className="flex items-end justify-between mb-6">
-            <h2 className="text-2xl font-bold">Programmes populaires</h2>
-            <NavLink to="/services" className="font-medium" style={{color:"var(--brand)"}}>Tous les services →</NavLink>
-          </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            {[{t:"Éducation du chiot (8–16 semaines)",p:"À partir de 120$ / séance"},{t:"Réactivité & marche en laisse",p:"Programme 4 séances"},{t:"Chiens de spécialité et assistance",p:"Bétail, renifleur, assistance, etc."}].map((s,i)=> (
-              <div key={i} className="border rounded-2xl p-6" style={{background:"var(--brand-light)", borderColor:"#d1d5db"}}>
-                <div className="h-16 w-16 rounded-full mb-3 grid place-items-center" style={{background:"var(--brand-light)"}}>
-                  <div className="h-8 w-8 bg-gray-300 rounded"/>
-                </div>
-                <h3 className="font-semibold">{s.t}</h3>
-                <p className="text-gray-600 text-sm mt-1">{s.p}</p>
-                <NavLink to="/services" className="inline-block mt-4 font-medium" style={{color:"var(--brand)"}}>Détails →</NavLink>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </section>
+    {/* Programmes populaires */}
+<section className="py-14 bg-white">
+  <Container>
+    <div className="flex items-end justify-between mb-6">
+      <h2 className="text-2xl font-bold">Programmes populaires</h2>
+      <NavLink to="/services" className="font-medium" style={{color:"var(--brand)"}}>Tous les services →</NavLink>
+    </div>
+
+    {/* Définis ici les 3 cartes avec le nom de fichier icône */}
+    {(() => {
+      const popular = [
+        { t: "Éducation du chiot (8–16 semaines)", p: "À partir de 120$ / séance", icon: "icone-chiot.png", alt: "Icône chiot" },
+        { t: "Réactivité & marche en laisse",       p: "Programme 4 séances",       icon: "icone-reactivite-marche.png", alt: "Icône réactivité/marche" },
+        { t: "Chiens de spécialité et assistance",  p: "Bétail, renifleur, assistance, etc.", icon: "icone-specialite-assistance.png", alt: "Icône spécialité/assistance" },
+      ];
+
+      // Petit composant pour fallback si l'image est absente
+      const Icon = ({src, alt}) => (
+        <div className="h-16 w-16 rounded-full mb-3 grid place-items-center" style={{background:"var(--brand-light)"}}>
+          <img
+            src={`/assets/icons/${src}`}
+            alt={alt}
+            style={{height: "2rem", width: "2rem", objectFit: "contain"}}
+            onError={(e) => { e.currentTarget.style.display = "none"; e.currentTarget.parentElement.innerHTML = '<div style="height:2rem;width:2rem;background:#d1d5db;border-radius:.5rem"></div>'; }}
+          />
+        </div>
+      );
+
+      return (
+        <div className="grid md:grid-cols-3 gap-6">
+          {popular.map((s,i)=>(
+            <div key={i} className="border rounded-2xl p-6" style={{background:"var(--brand-light)", borderColor:"#d1d5db"}}>
+              <Icon src={s.icon} alt={s.alt} />
+              <h3 className="font-semibold">{s.t}</h3>
+              <p className="text-gray-600 text-sm mt-1">{s.p}</p>
+              <NavLink to="/services" className="inline-block mt-4 font-medium" style={{color:"var(--brand)"}}>Détails →</NavLink>
+            </div>
+          ))}
+        </div>
+      );
+    })()}
+  </Container>
+</section>
 
       <section className="py-14" style={{background:"var(--brand-light)"}}>
         <Container>
