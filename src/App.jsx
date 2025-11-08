@@ -231,7 +231,7 @@ function Apropos(){
     <main className="py-12">
       <Container>
         <h1 className="text-3xl font-bold mb-10 text-center">À propos des co-fondateurs</h1>
-        <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto items-start">
           <div className="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-sm border">
             <div className="h-72 w-72 rounded-2xl mb-6 grid place-items-center text-gray-600 bg-gray-300 bg-cover bg-center" style={{backgroundImage:"var(--constance)"}}>[Portrait Constance Vale]</div>
             <h2 className="text-2xl font-semibold mb-2">Constance Vale</h2>
