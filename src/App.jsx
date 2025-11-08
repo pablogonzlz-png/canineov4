@@ -233,13 +233,13 @@ function Apropos(){
         <h1 className="text-3xl font-bold mb-10 text-center">À propos des co-fondateurs</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto items-start">
           <div className="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-sm border">
-            <div className="h-72 w-72 rounded-2xl mb-6 grid place-items-center text-gray-600 bg-gray-300 bg-cover bg-center" style={{backgroundImage:"var(--constance)"}}>[Portrait Constance Vale]</div>
+            <div className="h-72 w-72 rounded-2xl mb-6 grid place-items-center text-gray-600 bg-gray-300 bg-cover bg-center" style={{backgroundImage:"var(--constance)"}}></div>
             <h2 className="text-2xl font-semibold mb-2">Constance Vale</h2>
             <p className="text-gray-700 mb-2 font-medium">Co-fondatrice & Éducatrice canine</p>
             <p className="text-gray-700 text-sm leading-relaxed">Constance possède plus de huit ans d’expérience auprès de chiens de toutes races et tempéraments. Passionnée par la compréhension du comportement animal, elle se spécialise dans l’éducation des chiots, la gestion de la réactivité et l’accompagnement des chiens d’assistance. Son approche repose sur la science du comportement, le respect et la cohérence familiale.</p>
           </div>
-          <div className="flex flex-col items-center text-center bg-white p-6 rounded-2xl shadow-sm border">
-            <div className="h-72 w-72 rounded-2xl mb-6 grid place-items-center text-gray-600 bg-gray-300 bg-cover bg-center" style={{backgroundImage:"var(--marc)"}}>[Portrait Marc Kemp]</div>
+          <div className="grid grid-rows-[auto_auto_1fr] justify-items-center text-center bg-white p-6 rounded-2xl shadow-sm border gap-3">
+            <div className="h-72 w-72 rounded-2xl mb-6 grid place-items-center text-gray-600 bg-gray-300 bg-cover bg-center" style={{backgroundImage:"var(--marc)"}}></div>
             <h2 className="text-2xl font-semibold mb-2">Marc Kemp</h2>
             <p className="text-gray-700 mb-2 font-medium">Co-fondateur & Dresseur spécialisé</p>
             <p className="text-gray-700 text-sm leading-relaxed">Marc est reconnu pour son expertise dans le dressage de chiens d’assistance et de chiens de bétail. Il se concentre sur la mise en place de routines adaptées au rôle du chien, que ce soit pour le travail ou l’aide au quotidien. Son approche repose sur la confiance mutuelle et la progression positive, assurant un apprentissage durable et respectueux pour le chien comme pour son maître.</p>
