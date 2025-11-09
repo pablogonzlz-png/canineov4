@@ -290,11 +290,28 @@ function Apropos() {
 
 function Services(){
   const items = [
-    { title: "Éducation du chiot", desc: "Propreté, socialisation, rappel, bases d’obéissance.", price: "À partir de 120$ / séance" },
-    { title: "Réactivité & marche en laisse", desc: "Désensibilisation, gestion des déclencheurs, routines calmes.", price: "Programme 4 séances" },
-    { title: "Assistance", desc: "Accompagnement en obéissance et comportements liés au rôle d’assistance.", price: "Plan personnalisé — Voir l’encadré en bas de page pour l’accessibilité au programme." },
-    { title: "Chiens de spécialité", desc: "Chien de bétail, chien renifleur, chien de chasse, etc.", price: "Sur évaluation" },
+    { title: "Éducation du chiot", desc: "Propreté, socialisation, rappel, bases d’obéissance.", price: "À partir de 120$ / séance", icon: "icone-chiot.png" },
+    { title: "Réactivité & marche en laisse", desc: "Désensibilisation, gestion des déclencheurs, routines calmes.", price: "Programme 4 séances", icon: "icone-reactivite-marche.png" },
+    { title: "Assistance", desc: "Accompagnement en obéissance et comportements liés au rôle d’assistance.", price: "Plan personnalisé — Voir l’encadré en bas de page pour l’accessibilité au programme.", icon: "icone-assistance.png" },
+    { title: "Chiens de spécialité", desc: "Chien de bétail, chien renifleur, chien de chasse, etc.", price: "Sur évaluation", icon: "icone-specialites.png" },
   ];
+
+  const Icon = ({file, alt}) => (
+    <div className="h-16 w-16 rounded mb-3 grid place-items-center" style={{background:"var(--brand-light)"}}>
+      <img
+        src={`/assets/icons/${file}`}    // dossier: public/assets/icons/<fichier>
+        alt={alt}
+        loading="lazy"
+        style={{ height: "2.75rem", width: "2.75rem", objectFit: "contain" }}
+        onError={(e) => {
+          e.currentTarget.style.display = "none";
+          e.currentTarget.parentElement.innerHTML =
+            '<div style="height:2.75rem;width:2.75rem;background:#d1d5db;border-radius:.5rem"></div>';
+        }}
+      />
+    </div>
+  );
+
   return (
     <main className="py-12">
       <Container>
@@ -302,7 +319,7 @@ function Services(){
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((s,i)=>(
             <div key={i} className="bg-white border rounded-2xl p-6">
-              <div className="h-12 w-12 rounded mb-3" style={{background:"var(--brand-light)"}}/>
+              <Icon file={s.icon} alt={s.title} />
               <h3 className="font-semibold">{s.title}</h3>
               <p className="text-sm text-gray-600 mt-1">{s.desc}</p>
               {s.price && <p className="mt-3 text-gray-900 font-medium">{s.price}</p>}
@@ -310,10 +327,12 @@ function Services(){
             </div>
           ))}
         </div>
+
         <div className="border rounded-2xl p-6 mt-10" style={{background:"var(--brand-light)", borderColor:"#d1d5db"}}>
           <h2 className="font-semibold mb-1">Forfaits sur mesure</h2>
           <p className="text-gray-700 text-sm">Après l’évaluation, nous proposons un parcours adapté à votre binôme, avec objectifs clairs et indicateurs de progression.</p>
         </div>
+
         <div className="bg-white border rounded-2xl p-6 mt-6">
           <h2 className="font-semibold mb-1">Programme Assistance — Informations importantes</h2>
           <ul className="text-sm text-gray-700 list-disc list-inside">
