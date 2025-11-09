@@ -399,7 +399,16 @@ function Contact(){
               <li><strong>Email :</strong> info@canineo.ca</li>
               <li><strong>Zones :</strong> Montréal & Rive-Sud</li>
             </ul>
-            <div className="h-56 rounded-xl mt-4 grid place-items-center text-gray-600 bg-gray-200">[Carte / zone d’intervention]</div>
+            <div className="h-56 rounded-xl mt-4 overflow-hidden">
+  <img
+    src="/assets/carte-zone.jpg"
+    alt="Zone d’intervention — Montréal & Rive-Sud"
+    className="w-full h-full object-cover"
+    loading="lazy"
+    onError={(e) => { e.currentTarget.style.display = "none"; }}
+  />
+</div>
+
           </div>
         </div>
       </Container>
