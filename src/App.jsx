@@ -237,13 +237,15 @@ function Apropos(){
           
           {/* --- Carte Constance --- */}
           <article className="grid grid-rows-[auto_auto_1fr] justify-items-center text-center bg-white p-6 rounded-2xl shadow-sm border gap-3">
-            {/* Photo */}
-            <div className="h-64 w-64 rounded-2xl overflow-hidden">
-              <div
-                className="h-full w-full bg-gray-300 bg-cover bg-center"
-                style={{ backgroundImage: "var(--constance)" }}
-              />
-            </div>
+{/* Photo Constance */}
+<div className="h-64 w-64 rounded-2xl overflow-hidden">
+  <img
+    src={ASSETS.constance}
+    alt="Constance Vale"
+    className="h-full w-full object-cover"
+    onError={(e)=>{ e.currentTarget.src="/assets/constance.jpg"; }}
+  />
+</div>
             {/* Nom + Titre */}
             <header className="grid gap-1">
               <h2 className="text-2xl font-semibold">Constance Vale</h2>
@@ -260,13 +262,15 @@ function Apropos(){
 
           {/* --- Carte Marc --- */}
           <article className="grid grid-rows-[auto_auto_1fr] justify-items-center text-center bg-white p-6 rounded-2xl shadow-sm border gap-3">
-            {/* Photo */}
-            <div className="h-64 w-64 rounded-2xl overflow-hidden">
-              <div
-                className="h-full w-full bg-gray-300 bg-cover bg-center"
-                style={{ backgroundImage: "var(--marc)" }}
-              />
-            </div>
+{/* Photo Marc */}
+<div className="h-64 w-64 rounded-2xl overflow-hidden">
+  <img
+    src={ASSETS.marc}
+    alt="Marc Kemp"
+    className="h-full w-full object-cover"
+    onError={(e)=>{ e.currentTarget.src="/assets/marc.jpg"; }}
+  />
+</div>
             {/* Nom + Titre */}
             <header className="grid gap-1">
               <h2 className="text-2xl font-semibold">Marc Kemp</h2>
