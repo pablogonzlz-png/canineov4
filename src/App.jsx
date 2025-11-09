@@ -226,7 +226,66 @@ function Accueil(){
   );
 }
 
-function Apropos(){ return ( <main className="py-12"> <Container> <h1 className="text-3xl font-bold mb-10 text-center">À propos des co-fondateurs</h1> {/* 2 colonnes dès md, 1 colonne en mobile */} <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto items-start"> {/* --- Carte Constance --- */} <article className="grid grid-rows-[auto_auto_1fr] justify-items-center text-center bg-white p-6 rounded-2xl shadow-sm border gap-3"> {/* Photo Constance */} <div className="rounded-2xl overflow-hidden" style={{ width: "12rem", height: "12rem" }}> <img src={ASSETS.constance} alt="Constance Vale" className="h-full w-full" style={{ objectFit: "cover" }} /> </div> {/* Nom + Titre */} <header className="grid gap-1"> <h2 className="text-2xl font-semibold">Constance Vale</h2> <p className="text-gray-700 font-medium">Co-fondatrice & Éducatrice canine</p> </header> {/* Description */} <p className="text-gray-700 text-sm leading-relaxed max-w-prose"> Constance possède plus de huit ans d’expérience auprès de chiens de toutes races et tempéraments. Passionnée par la compréhension du comportement animal, elle se spécialise dans l’éducation des chiots, la gestion de la réactivité et l’accompagnement des chiens d’assistance. Son approche repose sur la science du comportement, le respect et la cohérence familiale. </p> </article> {/* --- Carte Marc --- */} <article className="grid grid-rows-[auto_auto_1fr] justify-items-center text-center bg-white p-6 rounded-2xl shadow-sm border gap-3"> {/* Photo Marc */} <div className="rounded-2xl overflow-hidden" style={{ width: "12rem", height: "12rem" }}> <img src={ASSETS.marc} alt="Marc Kemp" className="h-full w-full" style={{ objectFit: "cover" }} /> </div> {/* Nom + Titre */} <header className="grid gap-1"> <h2 className="text-2xl font-semibold">Marc Kemp</h2> <p className="text-gray-700 font-medium">Co-fondateur & Dresseur spécialisé</p> </header> {/* Description */} <p className="text-gray-700 text-sm leading-relaxed max-w-prose"> Marc est reconnu pour son expertise dans le dressage de chiens d’assistance et de chiens de bétail. Il se concentre sur la mise en place de routines adaptées au rôle du chien, que ce soit pour le travail ou l’aide au quotidien. Son approche repose sur la confiance mutuelle et la progression positive, assurant un apprentissage durable et respectueux pour le chien comme pour son maître. </p> </article> </div> </Container> </main> ); }
+function Apropos() {
+  return (
+    <main className="py-12">
+      <Container>
+        <h1 className="text-3xl font-bold mb-10 text-center">À propos des co-fondateurs</h1>
+
+        {/* 1 colonne en mobile, 2 colonnes dès md */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+
+          {/* Constance */}
+          <article className="grid grid-rows-[auto_auto_auto_1fr] justify-items-center text-center bg-white p-6 rounded-2xl shadow-sm border gap-3">
+            {/* 1) Photo */}
+            <div className="w-48 h-48 rounded-2xl overflow-hidden">
+              <img
+                src={ASSETS.constance}
+                alt="Constance Vale"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* 2) Nom */}
+            <h2 className="text-2xl font-semibold">Constance Vale</h2>
+            {/* 3) Titre */}
+            <p className="text-gray-700 font-medium">Co-fondatrice & Éducatrice canine</p>
+            {/* 4) Description */}
+            <p className="text-gray-700 text-sm leading-relaxed max-w-prose">
+              Constance possède plus de huit ans d’expérience auprès de chiens de toutes races et tempéraments.
+              Passionnée par la compréhension du comportement animal, elle se spécialise dans l’éducation des chiots,
+              la gestion de la réactivité et l’accompagnement des chiens d’assistance. Son approche repose sur la science
+              du comportement, le respect et la cohérence familiale.
+            </p>
+          </article>
+
+          {/* Marc */}
+          <article className="grid grid-rows-[auto_auto_auto_1fr] justify-items-center text-center bg-white p-6 rounded-2xl shadow-sm border gap-3">
+            {/* 1) Photo */}
+            <div className="w-48 h-48 rounded-2xl overflow-hidden">
+              <img
+                src={ASSETS.marc}
+                alt="Marc Kemp"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {/* 2) Nom */}
+            <h2 className="text-2xl font-semibold">Marc Kemp</h2>
+            {/* 3) Titre */}
+            <p className="text-gray-700 font-medium">Co-fondateur & Dresseur spécialisé</p>
+            {/* 4) Description */}
+            <p className="text-gray-700 text-sm leading-relaxed max-w-prose">
+              Marc est reconnu pour son expertise dans le dressage de chiens d’assistance et de chiens de bétail.
+              Il se concentre sur la mise en place de routines adaptées au rôle du chien, que ce soit pour le travail
+              ou l’aide au quotidien. Son approche repose sur la confiance mutuelle et la progression positive,
+              assurant un apprentissage durable et respectueux pour le chien comme pour son maître.
+            </p>
+          </article>
+
+        </div>
+      </Container>
+    </main>
+  );
+}
 
 
 function Services(){
