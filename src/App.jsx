@@ -238,12 +238,13 @@ function Apropos(){
           {/* --- Carte Constance --- */}
           <article className="grid grid-rows-[auto_auto_1fr] justify-items-center text-center bg-white p-6 rounded-2xl shadow-sm border gap-3">
 {/* Photo Constance */}
-<div className="h-64 w-64 rounded-2xl overflow-hidden">
+<div className="rounded-2xl overflow-hidden"
+     style={{ width: "12rem", height: "12rem" }}>
   <img
     src={ASSETS.constance}
     alt="Constance Vale"
-    className="h-full w-full object-cover"
-    onError={(e)=>{ e.currentTarget.src="/assets/constance.jpg"; }}
+    className="h-full w-full"
+    style={{ objectFit: "cover" }}
   />
 </div>
             {/* Nom + Titre */}
@@ -263,12 +264,13 @@ function Apropos(){
           {/* --- Carte Marc --- */}
           <article className="grid grid-rows-[auto_auto_1fr] justify-items-center text-center bg-white p-6 rounded-2xl shadow-sm border gap-3">
 {/* Photo Marc */}
-<div className="h-64 w-64 rounded-2xl overflow-hidden">
+<div className="rounded-2xl overflow-hidden"
+     style={{ width: "12rem", height: "12rem" }}>
   <img
     src={ASSETS.marc}
     alt="Marc Kemp"
-    className="h-full w-full object-cover"
-    onError={(e)=>{ e.currentTarget.src="/assets/marc.jpg"; }}
+    className="h-full w-full"
+    style={{ objectFit: "cover" }}
   />
 </div>
             {/* Nom + Titre */}
