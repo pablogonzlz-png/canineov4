@@ -401,7 +401,7 @@ function Contact(){
             </ul>
             <div className="h-56 rounded-xl mt-4 overflow-hidden">
   <img
-    src="/assets/carte-zone.jpg"
+    src="/assets/carte-zones.jpg"
     alt="Zone d’intervention — Montréal & Rive-Sud"
     className="w-full h-full object-cover"
     loading="lazy"
