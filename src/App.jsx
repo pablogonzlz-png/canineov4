@@ -302,11 +302,11 @@ function Services(){
         src={`/assets/icons/${file}`}    // dossier: public/assets/icons/<fichier>
         alt={alt}
         loading="lazy"
-        style={{ height: "2.75rem", width: "2.75rem", objectFit: "contain" }}
+        style={{ height: "4rem", width: "4rem", objectFit: "contain" }}
         onError={(e) => {
           e.currentTarget.style.display = "none";
           e.currentTarget.parentElement.innerHTML =
-            '<div style="height:2.75rem;width:2.75rem;background:#d1d5db;border-radius:.5rem"></div>';
+            '<div style="height:4rem;width:4rem;background:#d1d5db;border-radius:.5rem"></div>';
         }}
       />
     </div>
