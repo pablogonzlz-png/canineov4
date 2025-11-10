@@ -386,7 +386,7 @@ function Contact(){
         <div className="grid lg:grid-cols-2 gap-8">
           <form name="contact" method="POST" data-netlify="true" className="bg-white p-6 rounded-2xl border grid gap-3">
             <input type="hidden" name="form-name" value="contact" />
-            <p className="text-sm text-gray-700 mb-2">Merci d’indiquer clairement les besoins de votre chien et le service que vous cherchez. Vous pouvez aussi nous envoyer photos et vidéos à notre adresse courriel. Nous vous contacterons par la suite.</p>
+            <p className="text-sm text-gray-700 mb-2">Merci d’indiquer clairement les besoins de votre chien et le service que vous cherchez. Vous pouvez aussi nous envoyer photos et vidéos à notre adresse courriel. Nous vous contacterons par la suite. SVP : Si le formulaire ne fonctionne pas, envoyez les informations à info@canineomtl.ca</p>
             <input name="nom" placeholder="Nom complet" className="border p-2 rounded" />
             <input name="telephone" placeholder="Numéro de téléphone" className="border p-2 rounded" />
             <input name="email" placeholder="Email" className="border p-2 rounded" />
