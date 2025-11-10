@@ -146,7 +146,7 @@ function Accueil(){
     {/* Définis ici les 3 cartes avec le nom de fichier icône */}
     {(() => {
       const popular = [
-        { t: "Éducation du chiot (8–16 semaines)", p: "À partir de 120$ / séance", icon: "icone-chiot.png", alt: "Icône chiot" },
+        { t: "Éducation du chiot (8–16 semaines)", p: "Nombre de séance adapté en fonction du chiot", icon: "icone-chiot.png", alt: "Icône chiot" },
         { t: "Réactivité & marche en laisse",       p: "Programme 4 séances",       icon: "icone-reactivite-marche.png", alt: "Icône réactivité/marche" },
         { t: "Chiens de spécialité et assistance",  p: "Bétail, renifleur, assistance, etc.", icon: "icone-specialite-assistance.png", alt: "Icône spécialité/assistance" },
       ];
@@ -290,7 +290,7 @@ function Apropos() {
 
 function Services(){
   const items = [
-    { title: "Éducation du chiot", desc: "Propreté, socialisation, rappel, bases d’obéissance.", price: "À partir de 120$ / séance", icon: "icone-chiot.png" },
+    { title: "Éducation du chiot", desc: "Propreté, socialisation, rappel, bases d’obéissance.", price: "Nombre de séance adapté en fonction du chiot", icon: "icone-chiot.png" },
     { title: "Réactivité & marche en laisse", desc: "Désensibilisation, gestion des déclencheurs, routines calmes.", price: "Programme 4 séances", icon: "icone-reactivite-marche.png" },
     { title: "Assistance", desc: "Accompagnement en obéissance et comportements liés au rôle d’assistance.", price: "Plan personnalisé — Voir l’encadré en bas de page pour l’accessibilité au programme.", icon: "icone-assistance.png" },
     { title: "Chiens de spécialité", desc: "Chien de bétail, chien renifleur, chien de chasse, etc.", price: "Sur évaluation", icon: "icone-specialites.png" },
@@ -396,8 +396,8 @@ function Contact(){
           <div className="bg-white p-6 rounded-2xl border">
             <h2 className="font-semibold mb-2">Informations</h2>
             <ul className="text-gray-700 space-y-1">
-              <li><strong>Email :</strong> info@canineo.ca</li>
-              <li><strong>Zones :</strong> Montréal & Rive-Sud</li>
+              <li><strong>Email :</strong> info@canineomtl.com</li>
+              <li><strong>Zones :</strong> Montréal, Rive Nord & Rive-Sud</li>
             </ul>
             <div className="h-56 rounded-xl mt-4 overflow-hidden">
   <img
